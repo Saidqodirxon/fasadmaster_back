@@ -3,15 +3,23 @@ const Banners = require("./Banners");
 let SITE_URL = process.env.SITE_URL;
 const addBannersService = async (req) => {
   try {
-    const { name_uz, name_ru, description_uz, description_ru, image, link } =
-      req.body;
+    const {
+      name_uz,
+      name_ru,
+      name_en,
+      description_uz,
+      description_ru,
+      description_en,
+      image,
+    } = req.body;
 
     const banners = new Banners({
       name_uz,
       name_ru,
+      name_en,
       description_uz,
       description_ru,
-      link,
+      description_en,
       image,
     });
 

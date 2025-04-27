@@ -10,6 +10,10 @@ const BannersSchema = new mongoose.Schema(
       type: mongoose.SchemaTypes.String,
       required: true,
     },
+    name_en: {
+      type: mongoose.SchemaTypes.String,
+      required: true,
+    },
     description_uz: {
       type: mongoose.SchemaTypes.String,
       required: true,
@@ -18,12 +22,21 @@ const BannersSchema = new mongoose.Schema(
       type: mongoose.SchemaTypes.String,
       required: true,
     },
-    link: {
+    description_en: {
       type: mongoose.SchemaTypes.String,
       required: true,
     },
     image: {
-      type: mongoose.SchemaTypes.Array,
+      type: {
+        url: {
+          type: mongoose.SchemaTypes.String,
+          required: true,
+        },
+        id: {
+          type: mongoose.SchemaTypes.String,
+          required: true,
+        },
+      },
     },
   },
   {

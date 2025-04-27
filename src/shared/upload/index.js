@@ -4,7 +4,7 @@ const fs = require("fs");
 require("dotenv").config(); // .env faylini yuklash uchun
 
 // SITE_URL ni env dan olish, agar yo'q bo'lsa default qiymat
-const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
+const SITE_URL = process.env.SITE_URL;
 
 // Public papkasini tekshirish va yaratish
 const ensurePublicFolder = () => {

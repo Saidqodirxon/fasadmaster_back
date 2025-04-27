@@ -4,8 +4,10 @@ exports.addBannersSchema = {
   body: Joi.object({
     name_uz: Joi.string(),
     name_ru: Joi.string(),
+    name_en: Joi.string(),
     description_uz: Joi.string(),
     description_ru: Joi.string(),
+    description_en: Joi.string(),
     link: Joi.string(),
     image: Joi.object(),
   }),
@@ -18,8 +20,10 @@ exports.patchBannersSchema = {
   body: Joi.object({
     name_uz: Joi.string(),
     name_ru: Joi.string(),
+    name_en: Joi.string(),
     description_uz: Joi.string(),
     description_ru: Joi.string(),
+    description_en: Joi.string(),
     link: Joi.string(),
     image: Joi.object(),
   }),
