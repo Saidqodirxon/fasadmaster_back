@@ -1,12 +1,14 @@
+require("dotenv").config();
 const Contacts = require("./Contacts");
 const TelegramBot = require("node-telegram-bot-api");
-
 const bot = new TelegramBot(process.env.BOT_TOKEN, {
   polling: false,
 });
 
 const siteUrl = process.env.MAIN_SITE;
 const chatId = process.env.CHAT_ID;
+
+console.log(chatId, " chatId");
 
 // [1551855614 /* @Real_Coder */]; with array
 
@@ -41,7 +43,9 @@ const postContact = async (req, res) => {
     `;
 
     // for (const chatId of chatIds) {
-    await bot.sendMessage(chatId, telegramMessage, { parse_mode: "HTML" });
+    await bot.sendMessage(`-1002638687829`, telegramMessage, {
+      parse_mode: "HTML",
+    });
     // }
 
     res.status(200).json({
