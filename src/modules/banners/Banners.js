@@ -14,18 +14,6 @@ const BannersSchema = new mongoose.Schema(
       type: mongoose.SchemaTypes.String,
       required: true,
     },
-    description_uz: {
-      type: mongoose.SchemaTypes.String,
-      required: true,
-    },
-    description_ru: {
-      type: mongoose.SchemaTypes.String,
-      required: true,
-    },
-    description_en: {
-      type: mongoose.SchemaTypes.String,
-      required: true,
-    },
     image: {
       type: {
         url: {
