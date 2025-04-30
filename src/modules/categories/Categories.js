@@ -14,6 +14,18 @@ const CategoriesSchema = new mongoose.Schema(
       type: mongoose.SchemaTypes.String,
       required: true,
     },
+    image: {
+      type: {
+        url: {
+          type: mongoose.SchemaTypes.String,
+          required: true,
+        },
+        id: {
+          type: mongoose.SchemaTypes.String,
+          required: true,
+        },
+      },
+    },
   },
   {
     versionKey: false,

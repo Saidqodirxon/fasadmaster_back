@@ -5,6 +5,7 @@ exports.addCategoriesSchema = {
     name_uz: Joi.string(),
     name_ru: Joi.string(),
     name_en: Joi.string(),
+    image: Joi.object(),
   }),
 };
 
@@ -17,6 +18,7 @@ exports.patchCategoriesSchema = {
     name_uz: Joi.string(),
     name_ru: Joi.string(),
     name_en: Joi.string(),
+    image: Joi.object(),
   }),
 };
 
