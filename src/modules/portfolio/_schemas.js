@@ -18,7 +18,6 @@ exports.patchPortfoliosSchema = {
   }),
 };
 
-const Joi = require("joi");
 
 exports.allPortfoliosSchema = {
   query: Joi.object({
