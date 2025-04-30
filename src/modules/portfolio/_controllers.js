@@ -95,6 +95,7 @@ const showPortfolios = async (req, res, next) => {
 
 const getPortfolios = async (req, res, next) => {
   try {
+    // Validate query parameters
     httpValidator({ query: req.query }, allPortfoliosSchema);
 
     const { query } = req;
@@ -111,6 +112,7 @@ const getPortfolios = async (req, res, next) => {
       q: query.q,
       sort: query.sort,
       page: { limit, offset },
+      is_visible: query.is_visible, // Pass is_visible to the service
     });
 
     res.status(200).json({

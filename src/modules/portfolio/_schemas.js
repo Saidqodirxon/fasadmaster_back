@@ -18,16 +18,19 @@ exports.patchPortfoliosSchema = {
   }),
 };
 
+const Joi = require("joi");
+
 exports.allPortfoliosSchema = {
   query: Joi.object({
     q: Joi.string(),
     sort: Joi.object({
-      by: Joi.string().valid("_id"),
+      by: Joi.string().valid("_id", "name_uz"),
       order: Joi.string().valid("asc", "desc"),
     }),
     page: Joi.object({
       offset: Joi.number().integer().min(0).default(0),
       limit: Joi.number().integer().min(1).default(3),
     }),
+    is_visible: Joi.boolean().optional(),
   }),
 };
