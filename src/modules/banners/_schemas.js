@@ -14,6 +14,7 @@ exports.patchBannersSchema = {
     id: Joi.string(),
   }),
   body: Joi.object({
+    _id: Joi.string(),
     name_uz: Joi.string(),
     name_ru: Joi.string(),
     name_en: Joi.string(),

@@ -19,6 +19,7 @@ exports.patchAboutSchema = {
     id: Joi.string(),
   }),
   body: Joi.object({
+    _id: Joi.string(),
     about_uz: Joi.string(),
     about_en: Joi.string(),
     about_ru: Joi.string(),
